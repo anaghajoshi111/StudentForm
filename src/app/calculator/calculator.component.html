@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="header">
+        <h2>
+            Calculator component
+        </h2> 
+    </div>
+ 
+    <div class="grid">
+        <div class="row">
+            <div class="col-6">
+                <div class="operation">
+                    <div class="row">
+                        <div class="col-12">
+                            <input [(ngModel)]="number1" type="number" name="" placeholder="number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input [(ngModel)]="number2" type="number" name="" placeholder="number">
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-3">
+                            <button (click)="add()" class="button">
+                                + 
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <button (click)="subtract()" class="button">
+                                + 
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <button (click)="multiply()" class="button">
+                                * 
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <button (click)="divide()" class="button">
+                                / 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="result">
+                    <span>
+                        Result:  {{result}} 
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+label {
+    font-weight: bold;
+}
+b {
+    color:brown;
+}
+input.ng-invalid { 
+    border-left : 5px solid red; 
+}
+input.ng-valid, input.ng-untouched { 
+    border-left : 5px solid green; 
+}

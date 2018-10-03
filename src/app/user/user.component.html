@@ -1,0 +1,41 @@
+<div class="text-center"><h2>Student Information</h2></div>
+<div class="container">
+    <table class="table table-dark table-striped">
+        <tr>
+                <th scope="col">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="name" [(ngModel)]="name">
+                    </div>
+                    <p class='text-error'>{{nameError}}</p>
+                </th>
+                <th scope="col">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="email" [(ngModel)]="email">
+                    </div>
+                    <p class='text-error'>{{emailError}}</p>
+                </th>
+                <th scope="col">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="mobile" [(ngModel)]="mobile">
+                    </div>
+                    <p class='text-error'>{{mobileError}}</p>
+                </th>
+                <th scope="col">
+                    <div class="form-group">
+                        <button class="btn btn-primary" (click)="addStudent()">Add</button>
+                    </div>
+                </th>
+        </tr>
+        <tr *ngFor="let student of students; let i = index" (click)="showStudent(i)" >
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.mobile}}</td>
+            <td>
+                <div class="form-group">
+                    <button class="btn btn-success" (click)="updateStudent(i)">Update</button>
+                    <button class="btn btn-danger" (click)="deleteStudent(i)">Delete</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

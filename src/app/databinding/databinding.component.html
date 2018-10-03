@@ -1,0 +1,25 @@
+<p>
+  databinding works!
+</p>
+
+{{fname +" "+ lname}} <br>
+
+{{fname}}<br><br>
+
+Property binding<br>
+<button class="btn btn-primary" [disabled]="!toActivate">Test Button </button>
+{{toActivate}} <br><br>
+
+Relation between property binding and sring interpolation <br>
+
+{{toActivate}}
+
+<p [innerHtml]= "toActivate"></p><br><br>
+
+EVent Binding<br>
+<button class="btn btn-primary" (click)="test()">Print Name  </button><br><br>
+
+Two way binding <br>
+ First Name <input type="text" [(ngModel)]="a"/><br>
+ LAst Name <input type="text" [(ngModel)]="b"/><br>
+ Sum: {{a-0 + b-0}}
