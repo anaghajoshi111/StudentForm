@@ -1,7 +1,7 @@
 <div class="bg-img">
 <div class="container">
     <h3 class="text-center">Student Application Form</h3>
-      <form [formGroup]="userForm"  (ngSubmit)="onSubmit()">
+      <form [formGroup]="userForm"  (ngSubmit)="onSubmit(userForm.value)">
 
         <!-- name field validation -->
         <div class="form-group">
@@ -45,7 +45,7 @@
                   <label>Street</label>
                   <input type="text" class="form-control" name="street" formControlName="street">
             </div>
-            <div *ngIf = "userForm.controls['address'].controls['street'].hasError('required')  && (userForm.controls['address'].controls['street'].dirty || userForm.controls['address'].controls['street'].touched)"  class="alert alert-danger">
+            <div *ngIf = "userForm.controls['address']['controls']['street'].hasError('required')  && (userForm.controls['address']['controls']['street'].dirty || userForm.controls['address']['controls']['street'].touched)"  class="alert alert-danger">
                 Please enter street
             </div>
 
@@ -55,7 +55,7 @@
                   <label>City</label>
                   <input type="text" class="form-control" name="city" formControlName="city"> 
               </div>
-              <div *ngIf = "userForm.controls['address'].controls['city'].hasError('required') && (userForm.controls['address'].controls['city'].dirty || userForm.controls['address'].controls['city'].touched)"  class="alert alert-danger">
+              <div *ngIf = "userForm.controls['address']['controls']['city'].hasError('required') && (userForm.controls['address']['controls']['city'].dirty || userForm.controls['address']['controls']['city'].touched)"  class="alert alert-danger">
                   Please enter city
               </div>
         </div>
